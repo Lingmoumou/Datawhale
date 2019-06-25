@@ -22,7 +22,7 @@ print("%d bytes" % (Z.size * Z.itemsize))
 
 #%%
 # 5.如何从命令行得到numpy中add函数的说明文档(提示: np.info)
-numpy.info(numpy.add)
+np.info(np.add)
 
 #%%
 # 6.创建一个长度为10并且除了第五个值为1的空向量(提示: array[4])
@@ -201,7 +201,7 @@ Z = np.ones(1) / 0
 # Back to sanity
 _ = np.seterr(**defaults)
 
-An equivalent way, with a context manager:
+# An equivalent way, with a context manager:
 
 with np.errstate(divide='ignore'):
     Z = np.ones(1) / 0
