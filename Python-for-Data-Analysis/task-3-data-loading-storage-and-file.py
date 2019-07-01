@@ -287,10 +287,6 @@ writer.save()
 #%%
 frame.to_excel('examples/ex2.xlsx')
 
-#%%
-get_ipython().system('rm examples/ex2.xlsx')
-
-
 # ## Interacting with Web APIs
 #%%
 import requests
@@ -341,9 +337,3 @@ pd.DataFrame(rows, columns=[x[0] for x in cursor.description])
 import sqlalchemy as sqla
 db = sqla.create_engine('sqlite:///mydata.sqlite')
 pd.read_sql('select * from test', db)
-
-#%%
-get_ipython().system('rm mydata.sqlite')
-
-
-# ## Conclusion
